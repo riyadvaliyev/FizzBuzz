@@ -13,31 +13,35 @@ class FizzBuzz {
         for (int i = 1; i < 100; i++) {
             /* For loop is quite different */
 
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-            /* Different styles of assignments */
+            doFizzBuzz(i);
+        }
+    }
 
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
-                /* Seems like && here means what 'and' is in Python */
+    public static void doFizzBuzz(int i) {
+        // Find out which numbers divide i.
+        boolean divisibleBy3 = i % 3 == 0;
+        boolean divisibleBy5 = i % 5 == 0;
+        /* Different styles of assignments */
 
-                System.out.println("Fizz Buzz");
-                /* Different style of printing (a bit more complicated) */
+        // Print our appropriate result.
+        if (divisibleBy3 && divisibleBy5) {
+            /* Seems like && here means what 'and' is in Python */
 
-            } else if (divisibleBy3) {
+            System.out.println("Fizz Buzz");
+            /* Different style of printing (a bit more complicated) */
 
-                System.out.println("Fizz");
+        } else if (divisibleBy3) {
 
-            } else if (divisibleBy5) {
+            System.out.println("Fizz");
 
-                System.out.println("Buzz");
+        } else if (divisibleBy5) {
 
-            } else {
+            System.out.println("Buzz");
 
-                System.out.println(i);
+        } else {
 
-            }
+            System.out.println(i);
+
         }
     }
 }
@@ -49,7 +53,6 @@ class FizBuzzWithWhile {
         int i = 1;
 
         while (i < 100) {
-
             i = doFizzBuzz(i);
         }
     }
